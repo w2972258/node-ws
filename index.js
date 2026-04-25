@@ -488,7 +488,7 @@ const delFiles = () => {
   ['npm', 'config.yaml'].forEach(file => fs.unlink(file, () => { }));
 };
 
-httpServer.listen(PORT, () => {
+httpServer.listen(PORT,'0.0.0.0', () => {
   runnz();
   setTimeout(() => {
     delFiles();
